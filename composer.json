@@ -15,5 +15,49 @@
 		"arikaim/core": "^1.0.0",
 		"arikaim/cors-module": "^1.0.0",
 		"arikaim/captcha-module": "^1.0.0",
+		"arikaim/dashboard-extension": "^1.0.0",
+		"arikaim/image-extension": "^1.0.0",
+		"arikaim/category-extension": "^1.0.0",
+		"arikaim/captcha-extension": "^1.0.0",
+		"arikaim/content-providers-extension": "^1.0.0",
+		"arikaim/mailers-module": "^1.0.0",
+		"arikaim/blog-extension": "^1.0.0",
+		"arikaim/blog-template": "^1.0.0",
+		"arikaim/system-template": "^1.0.0",
+		"arikaim/ui-components": "^1.0.0",
+		"arikaim/arikaim-library": "^1.0.0",
+		"arikaim/arikaim-ui-library": "^1.0.0",
+		"arikaim/highlight-library": "*",
+		"arikaim/jquery-library": "^3.0.0",
+		"arikaim/jquery-ui-library": "*",
+		"arikaim/filepond-library": "*",
+		"arikaim/foundation-emails-library": "^2.0.0",
+		"arikaim/fomantic-library": "^2.0.0",
+		"arikaim/talwind-library": "*",
+		"arikaim/chart-library": "*",
+		"arikaim/code-mirror-library": "*",
+		"arikaim/markdown-editor-library": "^1.0.0",
+		"arikaim/editors-library": "*",
+		"arikaim/icons-components": "*"
+	},
+	"config": {
+		"allow-plugins": {
+			"arikaim/installer": true
+		},
+		"bin-dir": "arikaim/bin"
+	},
+	"bin": [
+		"arikaim/bin/arikaimcli"
+	],
+	"scripts": {
+		"scripts": {
+			"pre-update-cmd": "Arikaim\\Installer\\ComposerEvents::preUpdate",
+			"post-update-cmd": "Arikaim\\Installer\\ComposerEvents::postUpdate",
+			"post-package-install": "Arikaim\\Installer\\ComposerEvents::postPackageInstall",
+			"post-package-update": "Arikaim\\Installer\\ComposerEvents::postPackageUpdate",
+			"post-create-project-cmd": [
+				"php cli install:prepare"
+			]
+		}
 	}
 }
