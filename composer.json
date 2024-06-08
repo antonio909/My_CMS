@@ -1,0 +1,19 @@
+{
+	"name": "arikaim/arikaim",
+	"description": "Arikaim CMS",
+	"keywords": ["CMS","Content Management System","Arikaim"],
+	"type": "project",
+	"license": "GPL-3.0-or-later",
+	"authors": [{
+		"name": "Konstantin Atanasov",
+		"email": "info@arikaim.com",
+		"homepage": "http://arikaim.com"
+	}],
+	"require": {
+		"php": "^8.0",
+		"arikaim/installer": "^1.0.0",
+		"arikaim/core": "^1.0.0",
+		"arikaim/cors-module": "^1.0.0",
+		"arikaim/captcha-module": "^1.0.0",
+	}
+}
