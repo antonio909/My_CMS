@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Arikaim
+ *
+ * @link       http://www.arikaim.com
+ * @copyright  Copyright (c) Konstantin Atanasov <info@arikaim.com>
+ * @license    http://www.arikaim.com/license
+ *
+*/
+define('ROOT_PATH',__DIR__);
+
+include_once "vendor/autoload.php";
+
+use Arikaim\Core\Console\Application;
+use Arikaim\Core\Arikaim;
+use Arikaim\Core\App\Console;
+
+Arikaim::systemInit(0,true);
+
+$application = new Application(
+    'Arikaim Cli',
+    '',
+    Arikaim::get('config')->getByPath('settings/console',[]),
+    Arikaim::logger()
+);
+
+$application->addCommands(Console::getCoreCommands());
+$application->addCommands(Console::getExtensionsCommands());
+$application->addCommands(Console::getModulesCommands());
+
+$application->run();
