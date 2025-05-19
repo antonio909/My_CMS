@@ -2,7 +2,7 @@
 <?php
 define('ROOT_PATH',dirname(dirname(__DIR__)));
 
-require __DIR__ . '/../../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php;
 
 use Arikaim\Core\Console\Application;
 use Arikaim\Core\Arikaim;
